@@ -61,6 +61,7 @@ export default function App({ loaderData }: Route.ComponentProps) {
   const config = createConfig({
     chains: [mainnet, megaethTestnet],
     multiInjectedProviderDiscovery: false,
+    ssr: true,
     transports: {
       [mainnet.id]: http(),
       [megaethTestnet.id]: http(),
