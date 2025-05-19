@@ -1,5 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
-import { ethers } from "ethers";
+import { useState, useEffect } from "react";
 import Big from "big.js";
 
 export const useGetEthPrice = () => {
