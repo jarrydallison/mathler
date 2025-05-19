@@ -1,87 +1,45 @@
-# Welcome to React Router!
+# Welcome to Mathler Redux!
 
-A modern, production-ready template for building full-stack React applications using React Router.
+I built this little game using [mathler](https://www.mathler.com/) as a fun project. TO make it more interesting, this version is wrapped in the [dynamic](dynamic.xyz) SDK, allowing for login, game tracking, and purchasing hints! Note that I only used megaETH testnet tokens, and also enabled a custom onramp to make it as easy as possible for the user.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Game overview
 
-## Features
+Find a 6-character math equation that equals the function value. The largest number is 3 digits. You may use one or more of the following operators: +, -, \*, and /. After an answer is submitted, the color of the tiles indicates whether the numbers and operators are correct. Green tiles are the correct character in the correct position. Yellow tiles are the correct character in the wrong position. White tiles are wholly incorrect. You have 6 guesses, and numbers and operators can be used multiple times. Good luck!
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## Crypto-specific
 
-## Getting Started
+Part of the build was designed to do something crypto related. I decided to allow users to be able to purchase hints, using megaETH's testnet token. I also enabled Dynamic's custom onRamp to pop up megaETH's faucet, enabling a user to immediately get more tokens and purchase hints. I know, I know, I'm a nice guy.
+
+## Testing
+
+The test coverage is decent but will be updated in the coming days. Tests cover the core functionality most crucial to the application game play, including function generation, function evaluation, and tile color scheme, among a few others.
+
+## Build overview
+
+Dynamic has multiple docs and starter kits for frameworks like react and next, but I wanted to build this in react router v7 as an additional exercise. This uses react-router v7 SSR. To deploy this application, I chose fly.io, as it was an early supporter of react-router v7 applications.
 
 ### Installation
 
-Install the dependencies:
+To run locally:
+
+1. Install the dependencies:
 
 ```bash
-npm install
+yarn install
 ```
 
-### Development
-
-Start the development server with HMR:
+2. Start the development server with HMR:
 
 ```bash
-npm run dev
+yarn dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+3. Your application will be available at `http://localhost:5173`.
 
 ## Building for Production
 
 Create a production build:
 
 ```bash
-npm run build
+yarn build
 ```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
