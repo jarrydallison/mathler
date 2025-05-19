@@ -13,8 +13,8 @@ import { useState } from "react";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Mathler" },
+    { name: "description", content: "Try an solve a radnom math equation!" },
   ];
 }
 
